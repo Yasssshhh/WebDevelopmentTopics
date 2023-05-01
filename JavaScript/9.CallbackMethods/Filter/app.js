@@ -1,4 +1,8 @@
-//Filter with array.
+//Filter: The filter() method creates a shallow copy of a portion of a given array, filtered down to just the 
+// elements from the given array that pass the test implemented by the provided function.
+
+// The filter() method is an iterative method. It calls a provided callbackFn function once for each element 
+// in an array, and constructs a new array of all the values for which callbackFn returns a truthy value. 
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
@@ -63,11 +67,11 @@ const recentMovies = movies.filter(m => m.year > 2000)
 
 movies.filter(m => m.score > 80).map(m => m.title);
 
-//Filter with function
+//Custom Filter 
 
 let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-function myPolyfillMap(arr2,cb){
+function myPolyfillFilter(arr2,cb){
     let newArr=[];
     for(let i=0;i<arr2.length;i++){
         if(cb(arr[i]))   newArr.push(arr2[i]);
@@ -79,5 +83,10 @@ function isEven(x){
     return x%2===0;
 }
 
-console.log(myPolyfillMap(arr2,isEven));
+console.log(myPolyfillFilter(arr2,isEven));
 // (10) [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+
+// It does not alter this but instead returns a shallow copy that contains the same elements as the ones from 
+// the original array (with some filtered out). However, the function provided as callbackFn can mutate the array.

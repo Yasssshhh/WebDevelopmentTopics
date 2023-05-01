@@ -38,3 +38,4 @@ movies.forEach(function (movie) {
 // NOTE:
 // forEach() does not mutate the array on which it is called, but the function provided as callbackFn can.
 // There is no way to stop or break a forEach() loop other than by throwing an exception.
+// forEach() expects a synchronous function — it does not wait for promises.
