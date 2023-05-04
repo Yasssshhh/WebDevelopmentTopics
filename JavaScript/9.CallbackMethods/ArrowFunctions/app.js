@@ -6,7 +6,7 @@
 //     return x + y;
 // }
 
-//Implit return
+//Implicit return
 const add = (a, b) => a + b;
 
 const square = num => {
@@ -20,8 +20,6 @@ const square = num => {
 const rollDie = () => (
     Math.floor(Math.random() * 6) + 1
 )
-
-
 
 
 const movies = [
